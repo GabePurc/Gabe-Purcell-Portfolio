@@ -441,8 +441,8 @@ h1 {
   padding: 1.1rem;
   align-content: end;
   background:
-    radial-gradient(circle at 78% 20%, rgba(181, 79, 45, 0.28), transparent 28%),
-    linear-gradient(135deg, #e1d2b7 0 18%, #ede5d7 18% 28%, #1b6b78 28% 30%, #f7f0e3 30% 100%);
+    linear-gradient(180deg, rgba(17, 19, 21, 0.12), rgba(17, 19, 21, 0.88)),
+    url("Assets/Strange%20Duck.jpg") 52% center / cover no-repeat;
 }
 
 .poster-kicker,
@@ -452,7 +452,7 @@ h1 {
 }
 
 .poster-kicker {
-  color: var(--rust);
+  color: #f2c58f;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.72rem;
   font-weight: 600;
@@ -465,6 +465,7 @@ h1 {
   font-size: clamp(2rem, 5vw, 3.35rem);
   font-weight: 800;
   line-height: 0.98;
+  color: var(--bone);
 }
 
 .video-type {

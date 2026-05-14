@@ -743,6 +743,20 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .section-head {
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-head h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 0.98;
+  }
+
+  .photo-grid {
+    grid-auto-rows: auto;
+  }
+
   .photo-image,
   .photo-large,
   .photo-wide {
@@ -773,6 +787,7 @@ footer {
 
   .panel {
     width: min(100% - 1.4rem, 1180px);
+    padding-block: 2.35rem;
   }
 
   .track-card iframe {

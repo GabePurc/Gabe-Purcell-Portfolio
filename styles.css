@@ -585,6 +585,98 @@ h1 {
   margin: 0;
 }
 
+.experience-panel {
+  border-top-color: rgba(181, 79, 45, 0.34);
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.experience-copy {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.9), rgba(230, 220, 203, 0.58)),
+    var(--bone);
+  padding: clamp(1rem, 3vw, 1.4rem);
+}
+
+.experience-kicker {
+  margin: 0 0 0.65rem;
+  color: var(--rust);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.experience-copy h3 {
+  margin-bottom: 0.85rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.experience-copy p {
+  color: var(--ink-soft);
+}
+
+.experience-copy .text-link {
+  margin-top: auto;
+}
+
+.experience-photos {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 0.75rem;
+}
+
+.experience-photos figure {
+  position: relative;
+  min-height: 440px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--charcoal);
+}
+
+.experience-photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-photos figure:first-child img {
+  object-position: center 44%;
+}
+
+.experience-photos figure:last-child img {
+  object-position: center center;
+}
+
+.experience-photos figcaption {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  border-radius: 4px;
+  padding: 0.42rem 0.6rem;
+  background: rgba(17, 19, 21, 0.82);
+  color: var(--bone);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .photo-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: minmax(220px, 28vw);
@@ -621,6 +713,10 @@ h1 {
   grid-column: span 2;
 }
 
+.photo-tall {
+  grid-row: span 2;
+}
+
 .photo-image img {
   display: block;
   width: 100%;
@@ -631,6 +727,10 @@ h1 {
 
 .photo-wide img {
   object-position: center center;
+}
+
+.photo-tall img {
+  object-position: center 42%;
 }
 
 .photo-image figcaption {
@@ -736,6 +836,8 @@ footer {
   .soundcloud-grid,
   .video-grid,
   .snapshot-grid,
+  .experience-layout,
+  .experience-photos,
   .skill-groups,
   .card-grid.three,
   .card-grid.two,
@@ -759,10 +861,15 @@ footer {
 
   .photo-image,
   .photo-large,
-  .photo-wide {
+  .photo-wide,
+  .photo-tall {
     grid-column: auto;
     grid-row: auto;
     min-height: 420px;
+  }
+
+  .experience-photos figure {
+    min-height: 360px;
   }
 
   .snapshot-card,
